@@ -12,11 +12,12 @@ namespace CalculatorProject.Loops
         public string Name { get; set; }
         public int Id { get; set; }
         public float Price { get; set; }
+        public Guid Guid { get; set; }
 
         //Crea el objeto sin parametros
         public Product()
         {
-
+            Guid= Guid.NewGuid();
         }
 
         //Crea el objeto pasandole paranetros
@@ -25,6 +26,7 @@ namespace CalculatorProject.Loops
             Name=name;
             Id=id;
             Price=price;
+            Guid= Guid.NewGuid();
         }
 
         //Pasa el objeto a cadeba de texto

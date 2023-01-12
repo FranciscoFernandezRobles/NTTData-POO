@@ -43,11 +43,12 @@ namespace CalculatorProject.Loops
         public static List<Product> GetProductsGreaterThan30WithWhile()
         {
             var productsGreaterThan30 = new List<Product>();
-            productsGreaterThan30 = products;
             int i = 0;
-            while (i <= productsGreaterThan30.Count && productsGreaterThan30[i].Price<30)
+            while (i < products.Count)
             {
-                productsGreaterThan30.RemoveAt(i);
+                if (products[i].Price>30) { 
+                    productsGreaterThan30.Add(products.ElementAt(i));
+                }
                 i++;
             }
             return productsGreaterThan30;
@@ -56,10 +57,11 @@ namespace CalculatorProject.Loops
         public static List<Product> GetProductsGreaterThan30WithFor()
         {
             var productsGreaterThan30 = new List<Product>();
-            productsGreaterThan30 = products;
-            for (int i = 0; i <= productsGreaterThan30.Count && productsGreaterThan30[i].Price<30; i++)
+            for (int i = 0; i < products.Count; i++)
             {
-                    productsGreaterThan30.RemoveAt(i);
+                if (products[i].Price>30) { 
+                    productsGreaterThan30.Add(products.ElementAt(i));
+                }
             }
             return productsGreaterThan30;
         }

@@ -27,6 +27,7 @@ namespace CalculatorProject.Loops.Tests
         [TestMethod()]
         public void GetProductsGreaterThan30WithWhileTest()
         {
+            Assert.IsTrue(PrintProduct.GetProductsGreaterThan30WithWhile().Count==2);
             Assert.IsTrue(PrintProduct.GetProductsGreaterThan30WithWhile()[0].Name=="Aceite");
             Assert.IsTrue(PrintProduct.GetProductsGreaterThan30WithWhile()[1].Name=="Juego");
         }
@@ -34,6 +35,7 @@ namespace CalculatorProject.Loops.Tests
         [TestMethod()]
         public void GetProductsGreaterThan30WithForTest()
         {
+            Assert.IsTrue(PrintProduct.GetProductsGreaterThan30WithFor().Count==2);
             Assert.IsTrue(PrintProduct.GetProductsGreaterThan30WithFor()[0].Name=="Aceite");
             Assert.IsTrue(PrintProduct.GetProductsGreaterThan30WithFor()[1].Name=="Juego");
         }
