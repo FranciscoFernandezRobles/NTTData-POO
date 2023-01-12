@@ -35,6 +35,9 @@ namespace CalculatorProject.Loops
                 Price = 39.99f
             };
             products.Add(game);
+
+            var shoes = new Product(4, "Zapatos", 20.99f);
+            products.Add(shoes);
         }
 
         public static List<Product> GetProductsGreaterThan30WithWhile()
@@ -42,9 +45,9 @@ namespace CalculatorProject.Loops
             var productsGreaterThan30 = new List<Product>();
             productsGreaterThan30 = products;
             int i = 0;
-            while (i < productsGreaterThan30.Count && productsGreaterThan30[i].Price<30)
+            while (i <= productsGreaterThan30.Count && productsGreaterThan30[i].Price<30)
             {
-                    productsGreaterThan30.RemoveAt(i);
+                productsGreaterThan30.RemoveAt(i);
                 i++;
             }
             return productsGreaterThan30;
@@ -54,7 +57,7 @@ namespace CalculatorProject.Loops
         {
             var productsGreaterThan30 = new List<Product>();
             productsGreaterThan30 = products;
-            for (int i = 0; i < productsGreaterThan30.Count && productsGreaterThan30[i].Price<30; i++)
+            for (int i = 0; i <= productsGreaterThan30.Count && productsGreaterThan30[i].Price<30; i++)
             {
                     productsGreaterThan30.RemoveAt(i);
             }
