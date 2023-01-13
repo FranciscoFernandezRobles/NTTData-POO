@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CalculatorProject.Inheritance;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace CalculatorProject.PlandePensiones
     public class PensionPlan
     {
         public static void Pension() {
+
             PensionCalc pensionCalc = new PensionCalc();
             Calculator calculator = new Calculator();
             Questions questions = new Questions();
