@@ -12,32 +12,37 @@ namespace CalculatorProject.Tests
     public class CalculatorTests
     {
         Calculator calculator = new Calculator();
-        [TestMethod()]
-        public void AddTest()
+
+        [DataRow(3,3,6)]
+        [DataRow(4,4,8)]
+        [DataTestMethod]
+        public void AddTest(int num1, int num2, int result)
         {
-            Assert.IsTrue(calculator.Add(2, 2) == 4);
-            Assert.IsFalse(calculator.Add(2, 2) == 3);
+            Assert.IsTrue(calculator.Add(num1, num2) == result);
         }
 
-        [TestMethod()]
-        public void SubstractTest()
+        [DataRow(4, 3, 1)]
+        [DataRow(6, 4, 2)]
+        [DataTestMethod]
+        public void SubstractTest(int num1, int num2, int result)
         {
-            Assert.IsTrue(calculator.Substract(3, 2) == 1);
-            Assert.IsFalse(calculator.Substract(3, 2) == 4);
+            Assert.IsTrue(calculator.Substract(num1, num2) == result);
         }
 
-        [TestMethod()]
-        public void MultiplyTest()
+        [DataRow(6, 2, 12)]
+        [DataRow(5, 5, 25)]
+        [DataTestMethod]
+        public void MultiplyTest(int num1, int num2, int result)
         {
-            Assert.IsTrue(calculator.Multiply(4, 4) == 16);
-            Assert.IsFalse(calculator.Multiply(8, 6) == 7);
+            Assert.IsTrue(calculator.Multiply(num1, num2) == result);
         }
 
-        [TestMethod()]
-        public void DivideTest()
+        [DataRow(6, 3, 2)]
+        [DataRow(40, 4, 10)]
+        [DataTestMethod]
+        public void DivideTest(int num1, int num2, int result)
         {
-            Assert.IsTrue(calculator.Divide(80, 2) == 40);
-            Assert.IsFalse(calculator.Divide(60, 3) == 2);
+            Assert.IsTrue(calculator.Divide(num1, num2) == result);
         }
     }
 }
