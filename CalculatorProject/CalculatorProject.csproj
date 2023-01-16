@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CalculatorProject.PlandePensiones.Program</StartupObject>
+    <StartupObject>CalculatorProject.Polymorphism.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -51,6 +51,16 @@
     <Compile Include="Inheritance\NttDataBase.cs" />
     <Compile Include="Inheritance\PrintStudent.cs" />
     <Compile Include="Inheritance\Student.cs" />
+    <Compile Include="InterfaceExample\Ave\Ave.cs" />
+    <Compile Include="InterfaceExample\Ave\AvePropiedades.cs" />
+    <Compile Include="InterfaceExample\Vehiculo\Camion.cs" />
+    <Compile Include="InterfaceExample\Vehiculo\Coche.cs" />
+    <Compile Include="InterfaceExample\Ave\iAve.cs" />
+    <Compile Include="InterfaceExample\Vehiculo\IVehiculo.cs" />
+    <Compile Include="InterfaceExample\Vehiculo\Moto.cs" />
+    <Compile Include="InterfaceExample\Ave\Principal.cs" />
+    <Compile Include="InterfaceExample\Vehiculo\Principal.cs" />
+    <Compile Include="InterfaceExample\Vehiculo\Vehiculo.cs" />
     <Compile Include="Loops\PrintProduct.cs" />
     <Compile Include="Loops\Product.cs" />
     <Compile Include="PlandePensiones\PensionCalc.cs" />
@@ -58,6 +68,8 @@
     <Compile Include="PlandePensiones\PensionPlan.cs" />
     <Compile Include="PlandePensiones\Person.cs" />
     <Compile Include="PlandePensiones\Program.cs" />
+    <Compile Include="Polymorphism\Program.cs" />
+    <Compile Include="Polymorphism\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
